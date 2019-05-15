@@ -1,8 +1,8 @@
 package by.training.epam.task1oop.entity;
 
 import by.training.epam.task1oop.DateFormat;
-import by.training.epam.task1oop.Transport;
-import by.training.epam.task1oop.Type;
+import by.training.epam.task1oop.enm.Transport;
+import by.training.epam.task1oop.enm.Type;
 
 public class ExcursionTicket extends Ticket {
     private String place;

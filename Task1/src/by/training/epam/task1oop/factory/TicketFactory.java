@@ -1,6 +1,6 @@
 package by.training.epam.task1oop.factory;
 
-import by.training.epam.task1oop.Type;
+import by.training.epam.task1oop.enm.Type;
 import by.training.epam.task1oop.entity.Ticket;
 
 public  interface  TicketFactory {

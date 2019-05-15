@@ -1,4 +1,4 @@
-package by.training.epam.task1oop;
+package by.training.epam.task1oop.enm;
 
 public enum Transport {
     BUS,

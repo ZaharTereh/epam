@@ -1,7 +1,8 @@
 package by.training.epam.task1oop;
 
+import by.training.epam.task1oop.comparator.DateStartCompare;
 import by.training.epam.task1oop.entity.*;
-import by.training.epam.task1oop.factory.*;
+import by.training.epam.task1oop.repository.Repository;
 
 /**
  * Programm-Task1 OOP.
@@ -19,22 +20,24 @@ public final class Run {
      *@since03.05.2019
      */
     public static void main(final String[] args) {
-      Repository repository = new Repository();
 
-      repository.readObjectsFromFile();
-
-
+      Repository.getRepository();
+      Repository.repository.readObjectsFromFile();
 
 
-      for (Ticket ticket:repository.listObjects){
+      for (Ticket ticket:Repository.repository.listObjects){
           System.out.println(ticket.getDataStart());
       }
 
       System.out.println("After");
-      repository.sortByDateStart();
+        Repository.repository.sortObject(new DateStartCompare());
 
-        for (Ticket ticket:repository.listObjects){
+       // Repository.repository.deleteObject();
+
+        for (Ticket ticket:Repository.repository.listObjects){
             System.out.println(ticket.getDataStart());
         }
+
+
       }
     }

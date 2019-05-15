@@ -1,4 +1,8 @@
-package by.training.epam.task1oop;
+package by.training.epam.task1oop.validation;
+
+import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.enm.Transport;
+import by.training.epam.task1oop.enm.Type;
 
 public class Validation {
 
