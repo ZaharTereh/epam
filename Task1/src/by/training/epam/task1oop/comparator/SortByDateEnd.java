@@ -1,11 +1,12 @@
 package by.training.epam.task1oop.comparator;
 
-import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.date.DateFormat;
 import by.training.epam.task1oop.entity.Ticket;
 
 import java.util.Comparator;
 
-public class DateEndCompare implements Comparator<Ticket> {
+public class SortByDateEnd implements Comparator<Ticket> {
+
     @Override
     public int compare(Ticket o1, Ticket o2) {
         DateFormat obj1;

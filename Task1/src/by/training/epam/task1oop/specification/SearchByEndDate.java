@@ -1,6 +1,6 @@
 package by.training.epam.task1oop.specification;
 
-import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.date.DateFormat;
 import by.training.epam.task1oop.entity.Ticket;
 
 public class SearchByEndDate implements Specification {
@@ -16,7 +16,7 @@ public class SearchByEndDate implements Specification {
         }
     }
 
-    public SearchByEndDate(int year,int mounth,int day){
-        dateEnd = new DateFormat(year,mounth,day);
+    public SearchByEndDate(int year,int month,int day){
+        dateEnd = new DateFormat(year,month,day);
     }
 }

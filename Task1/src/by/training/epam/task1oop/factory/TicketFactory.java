@@ -5,7 +5,7 @@ import by.training.epam.task1oop.entity.Ticket;
 
 public  interface  TicketFactory {
 
-     Ticket createTicket(String[] object);
+     Ticket createTicket(String[] object,int ID);
 
       static TicketFactory createConcretFactory(Type type) throws RuntimeException{
           switch (type) {

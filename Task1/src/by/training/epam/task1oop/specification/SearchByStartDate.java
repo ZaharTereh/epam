@@ -1,6 +1,6 @@
 package by.training.epam.task1oop.specification;
 
-import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.date.DateFormat;
 import by.training.epam.task1oop.entity.Ticket;
 
 public class SearchByStartDate implements Specification {
@@ -16,7 +16,7 @@ public class SearchByStartDate implements Specification {
         }
     }
 
-    public SearchByStartDate(int year,int mounth,int day){
-        dateStart = new DateFormat(year,mounth,day);
+    public SearchByStartDate(int year,int month,int day){
+        dateStart = new DateFormat(year,month,day);
     }
 }

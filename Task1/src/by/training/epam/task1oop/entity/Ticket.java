@@ -1,6 +1,6 @@
 package by.training.epam.task1oop.entity;
 
-import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.date.DateFormat;
 import by.training.epam.task1oop.enm.Transport;
 import by.training.epam.task1oop.enm.Type;
 
@@ -12,6 +12,7 @@ import by.training.epam.task1oop.enm.Type;
      /**
       * * variable that stores information about location address.
       */
+     private int ID;
      private String departurePoint;
      private String destinationPoint;
      private int numberOfDays;
@@ -20,8 +21,6 @@ import by.training.epam.task1oop.enm.Type;
      private DateFormat dataEnd;
      private int numberOfIngestion;
      private final Type type;
-
-     //public abstract void getInformation();
 
     public String formStringToWrite(){
         String params = getType().toString() + "/";
@@ -45,6 +44,10 @@ import by.training.epam.task1oop.enm.Type;
     public String getDestinationPoint() {
         return destinationPoint;
     }
+
+    public int getID(){
+        return ID;
+    }
     public String getDataEnd() {
         return dataEnd.getDate();
     }
@@ -52,10 +55,10 @@ import by.training.epam.task1oop.enm.Type;
         return dataStart.getDate();
     }
     public int getYearStart(){return dataStart.getYear();}
-    public int getMounthStart(){return dataStart.getMounth();}
+    public int getMonthStart(){return dataStart.getMonth();}
     public int getDayStart(){return dataStart.getDay();}
     public int getYearEnd(){return dataEnd.getYear();}
-    public int getMounthEnd(){return dataEnd.getMounth();}
+    public int getMonthEnd(){return dataEnd.getMonth();}
     public int getDayEnd(){return dataEnd.getDay();}
     public int getNumberOfDays() {
         return numberOfDays;
@@ -70,7 +73,8 @@ import by.training.epam.task1oop.enm.Type;
         return type;
     }
 
-    public Ticket(String departure,String destination,int numberOfDays,Type t,Transport tr,DateFormat dS,DateFormat dE,int numOfIng){
+    public Ticket(int ID,String departure,String destination,int numberOfDays,Type t,Transport tr,DateFormat dS,DateFormat dE,int numOfIng){
+        this.ID = ID;
         this.departurePoint = departure;
         this.destinationPoint = destination;
         this.type = t;

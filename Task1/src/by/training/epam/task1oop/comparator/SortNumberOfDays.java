@@ -4,7 +4,7 @@ import by.training.epam.task1oop.entity.Ticket;
 
 import java.util.Comparator;
 
-public class NumberOfDaysCompare implements Comparator<Ticket> {
+public class SortNumberOfDays implements Comparator<Ticket> {
     @Override
     public int compare(Ticket o1, Ticket o2) {
         if (o1.getNumberOfDays() < o2.getNumberOfDays()) {

@@ -1,6 +1,6 @@
 package by.training.epam.task1oop.entity;
 
-import by.training.epam.task1oop.DateFormat;
+import by.training.epam.task1oop.date.DateFormat;
 import by.training.epam.task1oop.enm.Transport;
 import by.training.epam.task1oop.enm.Type;
 
@@ -17,8 +17,8 @@ public class VacationTicket extends Ticket {
         return objectString;
     }
 
-    public VacationTicket(String departure, String destination,int numerOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String nH){
-        super(departure,destination,numerOfDays,type,tr,dS,dE,numOfIng);
+    public VacationTicket(int ID,String departure, String destination,int numberOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String nH){
+        super(ID,departure,destination,numberOfDays,type,tr,dS,dE,numOfIng);
         this.nameOfHotel = nH;
     }
 }

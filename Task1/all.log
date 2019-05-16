@@ -1,0 +1,23 @@
+2019-05-16 04:09:10.597 [main] DEBUG by.training.epam.task1oop.repository.Repository - Repository was successful created
+2019-05-16 04:09:10.609 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading from Tickets.txt file...
+2019-05-16 04:09:10.648 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was added 8 elements to ArrayList<String>
+2019-05-16 04:09:10.648 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading was successful
+2019-05-16 04:09:10.658 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.668 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 0 ID
+2019-05-16 04:09:10.669 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.673 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 1 ID
+2019-05-16 04:09:10.674 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.674 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 2 ID
+2019-05-16 04:09:10.675 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.675 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 3 ID
+2019-05-16 04:09:10.678 [main] ERROR by.training.epam.task1oop.date.DateFormat - Illegal day recorded(more than 29 days in 2 month)
+2019-05-16 04:09:10.679 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
+2019-05-16 04:09:10.680 [main] ERROR by.training.epam.task1oop.date.DateFormat - Illegal day recorded(31 day in 4 month)
+2019-05-16 04:09:10.681 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
+2019-05-16 04:09:10.681 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.682 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 4 ID
+2019-05-16 04:09:10.682 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 04:09:10.683 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 5 ID
+2019-05-16 04:09:10.684 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was correct recorded and added 6 elements to ArrayList<Ticket>
+2019-05-16 04:09:10.741 [main] DEBUG by.training.epam.task1oop.repository.Repository - List was sorted by class by.training.epam.task1oop.comparator.SortByDateStart comparator
+2019-05-16 04:09:10.744 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was searched by class by.training.epam.task1oop.specification.SearchByType
