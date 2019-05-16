@@ -13,19 +13,38 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 /**
- * Class that consist list of Tickets and methods to work with this list.
+ * Class which consist list of Tickets and methods to work with this list.
  */
 public class Repository {
+    /**
+     * Logger for this class.
+     */
     private static final Logger logger = LogManager.getLogger(Repository.class.getName());
-
+    /**
+     * Counter which take ID for objects.
+     */
     private int counter_id = 0;
-
+    /**
+     * File which contains objects in string form.
+     */
     private File fileOfObjects = new File("src/data/Tickets.txt");
-
+    /**
+     * Temporary list which takes and contains objects in string form from file.
+     */
     public ArrayList<String[]> listStringsObjects = new ArrayList<>();
+    /**
+     * List which contains concrete objects.
+     */
     public ArrayList<Ticket> listObjects = new ArrayList<>();
+    /**
+     * List which contains objects after search.
+     */
     public ArrayList<Ticket> listForSearch = new ArrayList<>();
 
+    /**
+     * Method for reading objects in string form and writing their at ArrayList listStringObjects.
+     * @param fileOfObjects-file which contains objects in string form.
+     */
     private void readFile(File fileOfObjects) {
         try {
             logger.debug("Reading from "+fileOfObjects.getName()+" file...");
@@ -48,6 +67,10 @@ public class Repository {
         }
 
     }
+
+    /**
+     * Method for adding objects from listStringsObjects(34) to listObjects(38).
+     */
     private void parseListStringsObjects(){
 
         if(!listObjects.isEmpty()){
@@ -63,7 +86,9 @@ public class Repository {
         logger.debug("Was correct recorded and added "+ listObjects.size() +" elements to ArrayList<Ticket>");
     }
 
-
+    /**
+     * Method for writing objects from listObject to file.
+     */
     public void saveObject(){
         try {
             logger.debug("Writing objects to "+fileOfObjects.getName()+" file...");
@@ -81,21 +106,34 @@ public class Repository {
         }
 
     }
+
+    /**
+     * Method which calls readFile(48) and parseListStringsObjects(74).
+     */
     public void readObjectsFromFile(){
         readFile(fileOfObjects);
         parseListStringsObjects();
     }
 
+    /**
+     * Method for calling validation method, checking for errors and writing objects in listObjects
+     * @param object-array of params in string form.
+     */
     public void addObject(String[] object){
         TicketFactory ticketFactory;
         if (Validation.validation(object)) {
             logger.debug("Validation was successful");
-            ticketFactory = TicketFactory.createConcretFactory(Type.valueOf(object[0]));
+            ticketFactory = TicketFactory.createConcreteFactory(Type.valueOf(object[0]));
             listObjects.add(ticketFactory.createTicket(object,counter_id));
             logger.debug("Was created object with "+counter_id+" ID");
             counter_id++;
         }
     }
+
+    /**
+     * Method for delete objects from listObjects by ID.
+     * @param ID-number of index which will delete.
+     */
     public void deleteObject(int ID){
        try{
            listObjects.remove(ID);
@@ -105,10 +143,19 @@ public class Repository {
        }
     }
 
+    /**
+     * Method for sort.
+     * @param comparator-condition which indicates how sort list.
+     */
     public void sortObject(Comparator<Ticket> comparator){
         listObjects.sort(comparator);
         logger.debug("List was sorted by "+comparator.getClass()+" comparator");
     }
+
+    /**
+     * Method for search certain tickets.
+     * @param specification-condition how search tickets.
+     */
     public void searchObject(Specification specification){
 
         if(!listForSearch.isEmpty()){
@@ -124,7 +171,9 @@ public class Repository {
         logger.debug("Was searched by "+specification.getClass());
     }
 
-
+    /**
+     * Default constructor with package-private modifier.
+     */
     Repository(){
     }
 

@@ -7,7 +7,7 @@ public  interface  TicketFactory {
 
      Ticket createTicket(String[] object,int ID);
 
-      static TicketFactory createConcretFactory(Type type) throws RuntimeException{
+      static TicketFactory createConcreteFactory(Type type) throws RuntimeException{
           switch (type) {
                case VACATION:
                     return new VacationTicketFactory();
