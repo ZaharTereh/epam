@@ -18,7 +18,25 @@ public class TreatmentTicket extends Ticket {
         return objectString;
     }
 
-    public TreatmentTicket(int ID,String departure, String destination,int numberOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String nS){
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        TreatmentTicket that = (TreatmentTicket) o;
+
+        return nameOfSanatorium != null ? nameOfSanatorium.equals(that.nameOfSanatorium) : that.nameOfSanatorium == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (nameOfSanatorium != null ? nameOfSanatorium.hashCode() : 0);
+        return result;
+    }
+
+    public TreatmentTicket(int ID, String departure, String destination, int numberOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String nS){
         super(ID,departure,destination,numberOfDays,type,tr,dS,dE,numOfIng);
         this.nameOfSanatorium = nS;
     }

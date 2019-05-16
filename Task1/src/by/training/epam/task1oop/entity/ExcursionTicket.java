@@ -17,7 +17,25 @@ public class ExcursionTicket extends Ticket {
         return objectString;
     }
 
-    public ExcursionTicket(int ID,String departure, String destination,int numberOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String place){
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        ExcursionTicket that = (ExcursionTicket) o;
+
+        return place != null ? place.equals(that.place) : that.place == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (place != null ? place.hashCode() : 0);
+        return result;
+    }
+
+    public ExcursionTicket(int ID, String departure, String destination, int numberOfDays, Type type, Transport tr, DateFormat dS, DateFormat dE, int numOfIng, String place){
         super(ID,departure,destination,numberOfDays,type,tr,dS,dE,numOfIng);
         this.place = place;
     }

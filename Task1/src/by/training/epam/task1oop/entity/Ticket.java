@@ -22,6 +22,38 @@ import by.training.epam.task1oop.enm.Type;
      private int numberOfIngestion;
      private final Type type;
 
+    @Override
+    public boolean equals(Object o) {
+
+        Ticket ticket = (Ticket) o;
+
+        if (ID != ticket.ID) return false;
+        if (numberOfDays != ticket.numberOfDays) return false;
+        if (numberOfIngestion != ticket.numberOfIngestion) return false;
+        if (departurePoint != null ? !departurePoint.equals(ticket.departurePoint) : ticket.departurePoint != null)
+            return false;
+        if (destinationPoint != null ? !destinationPoint.equals(ticket.destinationPoint) : ticket.destinationPoint != null)
+            return false;
+        if (transport != ticket.transport) return false;
+        if (dataStart != null ? !dataStart.equals(ticket.dataStart) : ticket.dataStart != null) return false;
+        if (dataEnd != null ? !dataEnd.equals(ticket.dataEnd) : ticket.dataEnd != null) return false;
+        return type == ticket.type;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = ID;
+        result = 31 * result + (departurePoint != null ? departurePoint.hashCode() : 0);
+        result = 31 * result + (destinationPoint != null ? destinationPoint.hashCode() : 0);
+        result = 31 * result + numberOfDays;
+        result = 31 * result + (transport != null ? transport.hashCode() : 0);
+        result = 31 * result + (dataStart != null ? dataStart.hashCode() : 0);
+        result = 31 * result + (dataEnd != null ? dataEnd.hashCode() : 0);
+        result = 31 * result + numberOfIngestion;
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        return result;
+    }
+
     public String formStringToWrite(){
         String params = getType().toString() + "/";
         params += getDeparturePoint() + "/";

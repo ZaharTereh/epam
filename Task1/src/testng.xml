@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="Test Calc" >
+        <classes>
+            <class name="by.training.epam.task1oop.test.RepositoryTest" >
+               <methods>
+                   <include name="addObjectCorrect" />
+                   <include name="addObjectNegative" />
+                   <include name="deleteObjectCorrect" />
+                   <include name="deleteObjectNegative" />
+                   <include name="readObjectCorrect" />
+                   <include name="searchObjectCorrect" />
+                   <include name="sortObjectCorrect" />
+               </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.CreatorTest">
+                    <methods>
+                        <include name="createRepository"/>
+                    </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.SortByDateEndTest">
+                    <methods>
+                            <include name="compare"/>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

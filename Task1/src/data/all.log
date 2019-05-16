@@ -1,23 +1,181 @@
-2019-05-16 04:15:53.889 [main] DEBUG by.training.epam.task1oop.repository.Repository - Repository was successful created
-2019-05-16 04:15:53.899 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading from Tickets.txt file...
-2019-05-16 04:15:53.929 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was added 8 elements to ArrayList<String>
-2019-05-16 04:15:53.930 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading was successful
-2019-05-16 04:15:53.945 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.950 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 0 ID
-2019-05-16 04:15:53.951 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.954 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 1 ID
-2019-05-16 04:15:53.955 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.955 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 2 ID
-2019-05-16 04:15:53.956 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.957 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 3 ID
-2019-05-16 04:15:53.960 [main] ERROR by.training.epam.task1oop.date.DateFormat - Illegal day recorded(more than 29 days in 2 month)
-2019-05-16 04:15:53.960 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
-2019-05-16 04:15:53.963 [main] ERROR by.training.epam.task1oop.date.DateFormat - Illegal day recorded(31 day in 4 month)
-2019-05-16 04:15:53.964 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
-2019-05-16 04:15:53.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 4 ID
-2019-05-16 04:15:53.965 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
-2019-05-16 04:15:53.966 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 5 ID
-2019-05-16 04:15:53.966 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was correct recorded and added 6 elements to ArrayList<Ticket>
-2019-05-16 04:15:54.038 [main] DEBUG by.training.epam.task1oop.repository.Repository - List was sorted by class by.training.epam.task1oop.comparator.SortByDateStart comparator
-2019-05-16 04:15:54.043 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was searched by class by.training.epam.task1oop.specification.SearchByType
+2019-05-16 23:05:30.778 [main] DEBUG by.training.epam.task1oop.repository.Repository - Repository was successful created
+2019-05-16 23:05:30.803 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.829 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 0 ID
+2019-05-16 23:05:30.840 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.849 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 1 ID
+2019-05-16 23:05:30.859 [main] ERROR by.training.epam.task1oop.date.DateFormat - Illegal day recorded
+2019-05-16 23:05:30.859 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
+2019-05-16 23:05:30.860 [main] ERROR by.training.epam.task1oop.validation.Validation - Incorrect data format
+2019-05-16 23:05:30.877 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.880 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 2 ID
+2019-05-16 23:05:30.881 [main] DEBUG by.training.epam.task1oop.repository.Repository - Element with 0 was deleted
+2019-05-16 23:05:30.883 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.885 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 3 ID
+2019-05-16 23:05:30.887 [main] ERROR by.training.epam.task1oop.repository.Repository - Index -1 out-of-bounds for length 1
+2019-05-16 23:05:30.889 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.890 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 4 ID
+2019-05-16 23:05:30.891 [main] ERROR by.training.epam.task1oop.repository.Repository - Index 1 out-of-bounds for length 1
+2019-05-16 23:05:30.905 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading from Tickets.txt file...
+2019-05-16 23:05:30.913 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was added 25 elements to ArrayList<String>
+2019-05-16 23:05:30.914 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading was successful
+2019-05-16 23:05:30.914 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.915 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 5 ID
+2019-05-16 23:05:30.916 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.920 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 6 ID
+2019-05-16 23:05:30.921 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.921 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 7 ID
+2019-05-16 23:05:30.923 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.929 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 8 ID
+2019-05-16 23:05:30.929 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.932 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 9 ID
+2019-05-16 23:05:30.934 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.938 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 10 ID
+2019-05-16 23:05:30.939 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.941 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 11 ID
+2019-05-16 23:05:30.941 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.956 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 12 ID
+2019-05-16 23:05:30.958 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.959 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 13 ID
+2019-05-16 23:05:30.959 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.959 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 14 ID
+2019-05-16 23:05:30.961 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.961 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 15 ID
+2019-05-16 23:05:30.962 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.962 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 16 ID
+2019-05-16 23:05:30.963 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.963 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 17 ID
+2019-05-16 23:05:30.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 18 ID
+2019-05-16 23:05:30.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.964 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 19 ID
+2019-05-16 23:05:30.965 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.965 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 20 ID
+2019-05-16 23:05:30.968 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.968 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 21 ID
+2019-05-16 23:05:30.969 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.970 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 22 ID
+2019-05-16 23:05:30.970 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.971 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 23 ID
+2019-05-16 23:05:30.972 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.977 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 24 ID
+2019-05-16 23:05:30.977 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.977 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 25 ID
+2019-05-16 23:05:30.977 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.979 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 26 ID
+2019-05-16 23:05:30.981 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.989 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 27 ID
+2019-05-16 23:05:30.989 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.989 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 28 ID
+2019-05-16 23:05:30.990 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:30.990 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 29 ID
+2019-05-16 23:05:31.003 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was correct recorded and added 25 elements to ArrayList<Ticket>
+2019-05-16 23:05:31.019 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading from Tickets.txt file...
+2019-05-16 23:05:31.028 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was added 25 elements to ArrayList<String>
+2019-05-16 23:05:31.033 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading was successful
+2019-05-16 23:05:31.035 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.035 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 30 ID
+2019-05-16 23:05:31.039 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.040 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 31 ID
+2019-05-16 23:05:31.040 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.041 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 32 ID
+2019-05-16 23:05:31.042 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.043 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 33 ID
+2019-05-16 23:05:31.045 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.046 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 34 ID
+2019-05-16 23:05:31.047 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.048 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 35 ID
+2019-05-16 23:05:31.049 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.052 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 36 ID
+2019-05-16 23:05:31.052 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.053 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 37 ID
+2019-05-16 23:05:31.055 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.055 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 38 ID
+2019-05-16 23:05:31.057 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.058 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 39 ID
+2019-05-16 23:05:31.067 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.069 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 40 ID
+2019-05-16 23:05:31.069 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.069 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 41 ID
+2019-05-16 23:05:31.077 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.077 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 42 ID
+2019-05-16 23:05:31.082 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.086 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 43 ID
+2019-05-16 23:05:31.094 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.097 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 44 ID
+2019-05-16 23:05:31.097 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.097 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 45 ID
+2019-05-16 23:05:31.098 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.098 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 46 ID
+2019-05-16 23:05:31.099 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.101 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 47 ID
+2019-05-16 23:05:31.103 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 48 ID
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 49 ID
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 50 ID
+2019-05-16 23:05:31.104 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.105 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 51 ID
+2019-05-16 23:05:31.106 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.109 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 52 ID
+2019-05-16 23:05:31.110 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.110 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 53 ID
+2019-05-16 23:05:31.111 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.112 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 54 ID
+2019-05-16 23:05:31.113 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was correct recorded and added 25 elements to ArrayList<Ticket>
+2019-05-16 23:05:31.119 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was searched by class by.training.epam.task1oop.specification.SearchByType
+2019-05-16 23:05:31.134 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading from Tickets.txt file...
+2019-05-16 23:05:31.144 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was added 25 elements to ArrayList<String>
+2019-05-16 23:05:31.156 [main] DEBUG by.training.epam.task1oop.repository.Repository - Reading was successful
+2019-05-16 23:05:31.157 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.157 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 55 ID
+2019-05-16 23:05:31.157 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.158 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 56 ID
+2019-05-16 23:05:31.158 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.158 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 57 ID
+2019-05-16 23:05:31.158 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.159 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 58 ID
+2019-05-16 23:05:31.160 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.160 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 59 ID
+2019-05-16 23:05:31.160 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.161 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 60 ID
+2019-05-16 23:05:31.162 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.163 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 61 ID
+2019-05-16 23:05:31.163 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.163 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 62 ID
+2019-05-16 23:05:31.163 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.163 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 63 ID
+2019-05-16 23:05:31.164 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.165 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 64 ID
+2019-05-16 23:05:31.166 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.168 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 65 ID
+2019-05-16 23:05:31.168 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.169 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 66 ID
+2019-05-16 23:05:31.169 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.169 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 67 ID
+2019-05-16 23:05:31.169 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.169 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 68 ID
+2019-05-16 23:05:31.170 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.170 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 69 ID
+2019-05-16 23:05:31.170 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.170 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 70 ID
+2019-05-16 23:05:31.170 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.171 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 71 ID
+2019-05-16 23:05:31.171 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.171 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 72 ID
+2019-05-16 23:05:31.172 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.172 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 73 ID
+2019-05-16 23:05:31.172 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.172 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 74 ID
+2019-05-16 23:05:31.177 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.177 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 75 ID
+2019-05-16 23:05:31.177 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.177 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 76 ID
+2019-05-16 23:05:31.178 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.179 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 77 ID
+2019-05-16 23:05:31.179 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.179 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 78 ID
+2019-05-16 23:05:31.187 [main] DEBUG by.training.epam.task1oop.repository.Repository - Validation was successful
+2019-05-16 23:05:31.187 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was created object with 79 ID
+2019-05-16 23:05:31.187 [main] DEBUG by.training.epam.task1oop.repository.Repository - Was correct recorded and added 25 elements to ArrayList<Ticket>
+2019-05-16 23:05:31.311 [main] DEBUG by.training.epam.task1oop.repository.Repository - List was sorted by class by.training.epam.task1oop.comparator.SortByDateStart comparator
