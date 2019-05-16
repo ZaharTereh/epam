@@ -10,25 +10,25 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class SortByDateEndTest {
 
+public class SortByDateStartTest {
     @DataProvider(name = "correct")
     public Object[][] createCorrectData(){
         return
                 new Object[][]{
                         {new VacationTicket(0, "", "", 1,
-                                Type.VACATION, Transport.PLANE, new DateFormat(2019, 3, 3),
+                                Type.VACATION, Transport.PLANE, new DateFormat(2019, 2, 2),
                                 new DateFormat(2019, 3, 4), 2, ""),
-                        new VacationTicket(0, "", "", 1,
+                                new VacationTicket(0, "", "", 1,
                                         Type.VACATION, Transport.PLANE, new DateFormat(2019, 3, 3),
                                         new DateFormat(2019, 4, 4), 2, ""),
-                        -1
+                                -1
                         },
                         {new VacationTicket(0, "", "", 1,
                                 Type.VACATION, Transport.PLANE, new DateFormat(2019, 3, 3),
                                 new DateFormat(2019, 7, 7), 2, ""),
                                 new VacationTicket(0, "", "", 1,
-                                        Type.VACATION, Transport.PLANE, new DateFormat(2019, 3, 3),
+                                        Type.VACATION, Transport.PLANE, new DateFormat(2019, 2, 2),
                                         new DateFormat(2019, 6, 6), 2, ""),
                                 1
                         },
@@ -47,4 +47,3 @@ public class SortByDateEndTest {
         Assert.assertEquals(new SortByDateEnd().compare(o1,o2),rezult,"creation is correct");
     }
 }
-

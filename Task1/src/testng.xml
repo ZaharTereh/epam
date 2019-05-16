@@ -25,6 +25,31 @@
                             <include name="compare"/>
                     </methods>
             </class>
+            <class name="by.training.epam.task1oop.test.SortByDateStartTest">
+                <methods>
+                    <include name="compare"/>
+                </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.SortByIDTest">
+                <methods>
+                    <include name="compare"/>
+                </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.SortByDeparturePointTest">
+                <methods>
+                    <include name="compare"/>
+                </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.SortByDestinationPointTest">
+                <methods>
+                    <include name="compare"/>
+                </methods>
+            </class>
+            <class name="by.training.epam.task1oop.test.SortNumberOfDaysTest">
+                <methods>
+                    <include name="compare"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

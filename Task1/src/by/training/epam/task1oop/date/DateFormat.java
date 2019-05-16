@@ -5,8 +5,10 @@ package by.training.epam.task1oop.date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-    public class DateFormat implements Comparable<DateFormat>{
+/**
+ * Class for work with date which contains year,month,day and some methods for work with their.
+ */
+public class DateFormat implements Comparable<DateFormat>{
 
     static final Logger logger = LogManager.getLogger(DateFormat.class.getName());
 
@@ -14,6 +16,12 @@ import org.apache.logging.log4j.Logger;
     private int month;
     private int day;
 
+    /**
+     * Method which parse string and create object with year,month and day.
+     * @param date-date in string form.
+     * @return new object which contains year,month and day.
+     * @throws IllegalArgumentException
+     */
      public static DateFormat parseDate(String date) throws IllegalArgumentException {
          String[] dateString = date.split(" ");
          int[] dateInteger = new int[dateString.length];
@@ -23,6 +31,12 @@ import org.apache.logging.log4j.Logger;
          return new DateFormat(dateInteger[0], dateInteger[1], dateInteger[2]);
      }
 
+        /**
+         * Testing of this method contained in SortByDate[End,Start]Test class.
+         * Method for compare objects of this DataFormat class.
+         * @param o-Date with which is compared object by this. reference.
+         * @return -1 if less; 0 if equal; 1 if bigger.
+         */
     @Override
     public int compareTo(DateFormat o) {
             if(getYear() < o.getYear()){return -1;}
@@ -62,6 +76,13 @@ import org.apache.logging.log4j.Logger;
         this.day = day;
     }
 
+    /**
+     * Constructor which contain validation.
+     * @param year- concrete year.
+     * @param month-concrete month.
+     * @param day-concrete day.
+     * @throws IllegalArgumentException
+     */
     public DateFormat(int year,int month,int day)throws IllegalArgumentException{
 
         final int MINIMAL_YEAR = 2019;
