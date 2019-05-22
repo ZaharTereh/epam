@@ -5,7 +5,9 @@ import by.training.epam.task2tree.component.Composite;
 import by.training.epam.task2tree.enm.Type;
 
 public class LexemeParser implements Parser {
-    private Parser nextParser = new LexemeParser();
+    private Parser nextParser = new WordParser();
+    private Parser nextParser = new PunctuationMarkParser();
+
     @Override
     public Component parse(String lexeme) {
         Component component = new Composite(lexeme, Type.LEXEME);

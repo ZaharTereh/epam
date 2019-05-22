@@ -27,7 +27,7 @@ public class Repository {
     /**
      * File which contains objects in string form.
      */
-    private File fileOfObjects = new File("src/data/Tickets.txt");
+    private File fileOfObjects = new File("data/Tickets.txt");
     /**
      * Temporary list which takes and contains objects in string form from file.
      */

@@ -6,5 +6,6 @@ public enum Type {
     SENTENCE,
     LEXEME,
     WORD,
-    PUNCTUATION_MARK
+    PUNCTUATION_MARK,
+    SYMBOL
 }
