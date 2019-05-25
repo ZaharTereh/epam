@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 public class Composite implements  Component{
     private Type type;
-    private ArrayList<Component> components;
+    private ArrayList<Component> components = new ArrayList<>();
+
 
     @Override
     public void add(Component component) {
@@ -25,7 +26,7 @@ public class Composite implements  Component{
         return type;
     }
 
-    public Composite(String info,Type type){
+    public Composite(Type type){
         this.type = type;
     }
 

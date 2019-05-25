@@ -3,8 +3,12 @@ import by.training.epam.task2tree.enm.Type;
 
 public class Leaf implements Component {
     private String into;
-    private Type type;
+    private Type type = Type.SYMBOL;
 
+    @Override
+    public Type getType() {
+        return type;
+    }
     @Override
     public void add(Component component){
     }
@@ -18,6 +22,5 @@ public class Leaf implements Component {
 
     public Leaf(String symbol){
         this.into = symbol;
-        this.type = Type.SYMBOL;
     }
 }
