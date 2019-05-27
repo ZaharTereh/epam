@@ -16,7 +16,7 @@ public class TextParser implements Parser{
     @Override
     public Component parse(String text) {
         Component component = new Composite(Type.TEXT);
-        String paragraph = "";
+        String paragraph ;
         ArrayList<String> paragraphs = new ArrayList<>();
         matcher = pattern.matcher(text);
         while (matcher.find()){

@@ -10,18 +10,29 @@ public class Composite implements  Component{
 
 
     @Override
+    public ArrayList<Component> getList() {
+        return components;
+    }
+
+    @Override
+    public String getText() {
+        String result = "";
+        for(Component component:components){
+            if(component.getType()==Type.LEXEME) {
+                result += component.getText()+" ";
+            }else if(component.getType()==Type.PARAGRAPH){
+                result += "\t\t"+component.getText()+"\n\n";
+            }else {
+                result += component.getText();
+            }
+        }
+        return result;
+    }
+    @Override
     public void add(Component component) {
         components.add(component);
     }
     @Override
-    public void remove(Component component) {
-        components.remove(component);
-    }
-    @Override
-    public Component getChild(int index) {
-       return components.get(index);
-    }
-
     public Type getType() {
         return type;
     }

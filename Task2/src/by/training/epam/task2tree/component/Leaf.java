@@ -1,10 +1,20 @@
 package by.training.epam.task2tree.component;
 import by.training.epam.task2tree.enm.Type;
 
+import java.util.ArrayList;
+
 public class Leaf implements Component {
-    private String into;
+    private String info;
     private Type type = Type.SYMBOL;
 
+    @Override
+    public ArrayList<Component> getList() {
+        return null;
+    }
+    @Override
+    public String getText() {
+        return info;
+    }
     @Override
     public Type getType() {
         return type;
@@ -12,15 +22,8 @@ public class Leaf implements Component {
     @Override
     public void add(Component component){
     }
-    @Override
-    public void remove(Component component){
-    }
-    @Override
-    public Component getChild(int index) {
-        throw new UnsupportedOperationException();
-    }
 
     public Leaf(String symbol){
-        this.into = symbol;
+        this.info = symbol;
     }
 }

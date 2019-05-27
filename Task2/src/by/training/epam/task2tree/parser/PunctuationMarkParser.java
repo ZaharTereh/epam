@@ -28,7 +28,6 @@ public class PunctuationMarkParser implements Parser{
 
         for (String string : symbols){
             component.add(nextParser.parse(string));
-            System.out.println(string+" punctuation_mark");
         }
         return component;
     }

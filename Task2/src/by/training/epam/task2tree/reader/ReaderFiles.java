@@ -14,12 +14,14 @@ public class ReaderFiles {
     public static String readFile(File file) {
         StringBuilder text = new StringBuilder("");
         try {
+            logger.debug("Reading from "+file.getName()+" file...");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String line;
-            while ((line = bufferedReader.readLine()) != null){
-                text.append(line+"\n");
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line + "\n");
             }
-
+            bufferedReader.close();
+            logger.debug("Reading was successful");
         }catch (IOException ex){
            logger.error(ex.getMessage());
         }
