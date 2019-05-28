@@ -7,10 +7,20 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+/**
+ * Class for read text from file.
+ */
 public class ReaderFiles {
+    /**
+     * Logger for write information about application.
+     */
     private static final Logger logger = LogManager.getLogger(ReaderFiles.class.getName());
 
+    /**
+     * Method for read text from file.
+     * @param file - file which will read.
+     * @return String - text.
+     */
     public static String readFile(File file) {
         StringBuilder text = new StringBuilder("");
         try {
@@ -27,4 +37,5 @@ public class ReaderFiles {
         }
         return text.toString();
     }
+    private ReaderFiles(){}
 }

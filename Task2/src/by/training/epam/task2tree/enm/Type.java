@@ -1,5 +1,8 @@
 package by.training.epam.task2tree.enm;
 
+/**
+ * Types of Component.
+ */
 public enum Type {
     TEXT,
     PARAGRAPH,

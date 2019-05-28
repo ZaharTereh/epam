@@ -5,10 +5,19 @@ import by.training.epam.task2tree.component.Composite;
 import by.training.epam.task2tree.enm.Type;
 
 import java.util.ArrayList;
-
+/**
+ * Class for parsing words in symbols.
+ */
 public class WordParser implements Parser {
+    /**
+     * Next parser in hierarchy.
+     */
     private Parser nextParser = new SymbolParser();
-
+    /**
+     * Method for parsing paragraphs.
+     * @param word - words which will parsed.
+     * @return component with parsed symbols.
+     */
     @Override
     public Component parse(String word) {
         Component component = new Composite(Type.WORD);

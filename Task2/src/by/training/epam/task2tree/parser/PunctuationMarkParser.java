@@ -7,12 +7,27 @@ import by.training.epam.task2tree.enm.Type;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * Class for parsing punctuation marks in symbols.
+ */
 public class PunctuationMarkParser implements Parser{
+    /**
+     * Next parser in hierarchy.
+     */
     private Parser nextParser = new SymbolParser();
+    /**
+     * Regular expression that help select symbols.
+     */
     private Pattern pattern = Pattern.compile("\\p{P}");
+    /**
+     * Matcher for work with regular expression.
+     */
     private Matcher matcher;
-
+    /**
+     * Method for parsing punctuation marks.
+     * @param punctuation_mark - punctuation marks which will parsed.
+     * @return component with parsed symbols.
+     */
     @Override
     public Component parse(String punctuation_mark) {
         Component component = new Composite(Type.PUNCTUATION_MARK);

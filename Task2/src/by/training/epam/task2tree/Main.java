@@ -6,9 +6,10 @@ import by.training.epam.task2tree.controller.Creator;
 
 public class Main {
     public static void main(String[] args) {
-        Controller controller = Creator.createController();
+        /*Controller controller = Creator.createController();
         controller.createComponent();
-        controller.sort(new SortSentencesBySign('a'));
         System.out.println(controller.getText());
+        controller.sort(new SortSentencesBySign('a'));
+        System.out.println(controller.getText());*/
     }
 }
