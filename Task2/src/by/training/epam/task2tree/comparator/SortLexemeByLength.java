@@ -5,7 +5,6 @@ import by.training.epam.task2tree.enm.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Comparator;
 
 /**
  * Class which consist methods for sorting lexemes by length.

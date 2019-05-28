@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1" >
-    <test name="Test Calc" >
+    <test name="Test" >
         <classes>
-            <class name="" >
-               <methods>
-                   <include name="" />
+            <class name="by.training.epam.task2tree.test.SortLexemeByLengthTest" >
+                <methods>
+                    <include name="compareCorrect" />
+                    <include name="sortCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.SortParagraphBySentencesTest" >
+                <methods>
+                    <include name="compareCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.SortSentencesBySignTest" >
+                <methods>
+                    <include name="compareCorrect" />
+                    <include name="sortCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.CompositeTest" >
+                <methods>
+                    <include name="addCorrect" />
+                    <include name="getTextCorrect" />
+                    <include name="getTypeCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.CreatorTest" >
+                <methods>
+                    <include name="createControllerCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.ParserTest" >
+                <methods>
+                    <include name="parseCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.ReaderTest" >
+                <methods>
+                    <include name="readCorrect" />
                 </methods>
             </class>
         </classes>

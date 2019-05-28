@@ -3,7 +3,6 @@ package by.training.epam.task1oop.test;
 import by.training.epam.task1oop.repository.Creator;
 import by.training.epam.task1oop.repository.Repository;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class CreatorTest {
