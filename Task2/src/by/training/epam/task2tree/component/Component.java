@@ -1,6 +1,6 @@
 package by.training.epam.task2tree.component;
 
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.parser.Type;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ public interface Component {
      * Method which return instance on list.
      * @return instance on list.
      */
-    ArrayList<Component> getList();
+    ArrayList<Component> getList() throws LeafException ;
     /**
      * Method which return Type of component.
      * @return Type of component.
@@ -22,10 +22,5 @@ public interface Component {
      * Method for adding new objects in ArrayList.
      * @param component new object.
      */
-    void add(Component component);
-    /**
-     * Method which return its text.
-     * @return its text.
-     */
-    String  getText();
+    void add(Component component)  throws LeafException ;
 }

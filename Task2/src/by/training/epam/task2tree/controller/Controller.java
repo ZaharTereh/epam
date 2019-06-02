@@ -5,6 +5,8 @@ import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.parser.TextParser;
 import by.training.epam.task2tree.reader.ReaderFiles;
 import by.training.epam.task2tree.writer.WriterFiles;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
@@ -12,6 +14,14 @@ import java.io.File;
  * Class for manage Tree-Component.
  */
 public class Controller {
+    /**
+     * Instance in object-controller(for SingleTon)
+     */
+    private static Controller controller;
+    /**
+     * Logger for write information about application.
+     */
+    private static final Logger logger = LogManager.getLogger(Controller.class.getName());
     /**
      * Tree-Component.
      */
@@ -29,13 +39,14 @@ public class Controller {
      * @return String text.
      */
     public String getText() {
-        return component.getText();
+        return component.toString();
     }
     /**
      * Method for write Tree in file.
      */
     public void writeTextInFile() {
-        WriterFiles.writeInFile(getText());
+        File file = new File("data/output.txt");
+        WriterFiles.writeInFile(getText(),file);
     }
     /**
      * Method for sort Tree.
@@ -43,7 +54,22 @@ public class Controller {
     public void sort(Sort comparator){
         comparator.sort(component);
     }
+    /**
+     * Method which create controller(with SingleTon pattern).
+     * @return instance in object-controller or create
+     * new object-controller.
+     */
+    public static Controller getInstance(){
+        if(controller == null){
+            controller = new Controller();
+            logger.debug("Controller was successful created");
+        }
+        return controller;
+    }
 
-    Controller(){
+    /**
+     * Private constructor.
+     */
+    private Controller(){
     }
 }

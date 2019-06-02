@@ -1,9 +1,12 @@
 package by.training.epam.task2tree.comparator;
 
 import by.training.epam.task2tree.component.Component;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
+import by.training.epam.task2tree.parser.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 /**
  * Class which consist methods for sorting sentences by number of concrete sing.
@@ -22,11 +25,11 @@ public class SortSentencesBySign implements Sort {
      */
     @Override
     public int compare(Component o1, Component o2) {
-        Integer temp1 = new Integer(0);
-        Integer temp2 = new Integer(0);
+        int temp1 = 0;
+        int temp2 = 0;
 
-        String sentence1 = o1.getText();
-        String sentence2 = o2.getText();
+        String sentence1 = o1.toString();
+        String sentence2 = o2.toString();
         int size1 = sentence1.length();
         int size2 = sentence2.length();
 
@@ -40,7 +43,7 @@ public class SortSentencesBySign implements Sort {
                 temp2++;
             }
         }
-        return temp1.compareTo(temp2);
+        return temp1-temp2;
     }
     /**
      * Method for sorting us composite.
@@ -48,14 +51,19 @@ public class SortSentencesBySign implements Sort {
      */
     @Override
     public void sort(Component component) {
-        if (component.getType() == Type.PARAGRAPH) {
-            component.getList().sort(this);
-        } else {
-            for (Component temp : component.getList()) {
-                sort(temp);
+        try {
+            if (component.getType() == Type.PARAGRAPH) {
+                component.getList().sort(this);
+                logger.debug("Sort was successful!");
+            } else {
+                for (Component temp : component.getList()) {
+                    sort(temp);
+                }
             }
         }
-        logger.debug("Sort was successful!");
+        catch (LeafException ex){
+            ex.getMessage();
+        }
     }
     public SortSentencesBySign(Character sign){
         this.sign = sign;

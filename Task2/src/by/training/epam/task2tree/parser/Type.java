@@ -1,4 +1,4 @@
-package by.training.epam.task2tree.enm;
+package by.training.epam.task2tree.parser;
 
 /**
  * Types of Component.

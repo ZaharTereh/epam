@@ -15,14 +15,10 @@ public class WriterFiles {
      */
     private static final Logger logger = LogManager.getLogger(WriterFiles.class.getName());
     /**
-     * File for writing text.
-     */
-    private static File file = new File("data/output.txt");
-    /**
      * Method for read text from file.
      * @param text - text which will recorded.
      */
-    public static void writeInFile(String text) {
+    public static void writeInFile(final String text,final File file) {
         try {
             logger.debug("Writing text to "+file.getName()+" file...");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));

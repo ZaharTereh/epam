@@ -1,9 +1,12 @@
 package by.training.epam.task2tree.comparator;
 
 import by.training.epam.task2tree.component.Component;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
+import by.training.epam.task2tree.parser.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 /**
  * Class which consist methods for sorting paragraphs by sentences.
@@ -21,11 +24,16 @@ public class SortParagraphBySentences implements Sort {
      */
     @Override
     public int compare(Component o1, Component o2) {
-
-        Integer temp1 = o1.getList().size();
-        Integer temp2 = o2.getList().size();
-
-        return temp1.compareTo(temp2);
+        int temp1 = 0;
+        int temp2 = 0;
+        try {
+            temp1 = o1.getList().size();
+            temp2 = o2.getList().size();
+        }
+        catch (LeafException ex){
+            ex.getMessage();
+        }
+        return temp1 - temp2;
     }
     /**
      * Method for sorting us composite.
@@ -33,13 +41,18 @@ public class SortParagraphBySentences implements Sort {
      */
     @Override
     public void sort(Component component) {
+        try {
         if (component.getType() == Type.TEXT) {
             component.getList().sort(this);
+            logger.debug("Sort was successful!");
         } else {
             for (Component temp : component.getList()) {
                 sort(temp);
             }
         }
-        logger.debug("Sort was successful!");
+        }
+        catch (LeafException ex){
+        ex.getMessage();
+    }
     }
 }

@@ -2,7 +2,7 @@ package by.training.epam.task2tree.parser;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -19,10 +19,7 @@ public class ParagraphParser implements Parser {
      * Regular expression that help select sentences.
      */
     private Pattern pattern = Pattern.compile("([^\\t])+?(\\.{3}|\\?|!|\\.)");
-    /**
-     * Matcher for work with regular expression.
-     */
-    private Matcher matcher;
+
     /**
      * Method for parsing paragraphs.
      * @param paragraph - paragraphs which will parsed.
@@ -31,6 +28,7 @@ public class ParagraphParser implements Parser {
     @Override
     public Component parse(String paragraph) {
         Component component = new Composite(Type.PARAGRAPH);
+        Matcher matcher;
         String sentence ;
         ArrayList<String> sentences = new ArrayList<>();
         matcher = pattern.matcher(paragraph);
@@ -41,7 +39,12 @@ public class ParagraphParser implements Parser {
 
 
         for (String string : sentences){
-            component.add(nextParser.parse(string));
+            try {
+                component.add(nextParser.parse(string));
+            }
+             catch (LeafException ex){
+                ex.getMessage();
+            }
         }
 
         return component;

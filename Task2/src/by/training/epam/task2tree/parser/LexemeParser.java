@@ -2,7 +2,7 @@ package by.training.epam.task2tree.parser;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -24,10 +24,6 @@ public class LexemeParser implements Parser {
      * Regular expression that help select words and punctuation marks.
      */
     private Pattern pattern = Pattern.compile("\\p{P}+$");
-    /**
-     * Matcher for work with regular expression.
-     */
-    private Matcher matcher;
 
     /**
      * Class which help parse.
@@ -45,18 +41,20 @@ public class LexemeParser implements Parser {
     @Override
     public Component parse(String lexeme) {
         Component component = new Composite(Type.LEXEME);
+        Matcher matcher;
 
-        Element punctuation_mark = new Element();
+
+        Element punctuationMark = new Element();
         Element word = new Element();
         ArrayList<Element> partsOfLexemes = new ArrayList<>();
         matcher = pattern.matcher(lexeme);
         if (matcher.find()) {
-            punctuation_mark.type = Type.PUNCTUATION_MARK;
-            punctuation_mark.info = lexeme.substring(matcher.start(),lexeme.length());
+            punctuationMark.type = Type.PUNCTUATION_MARK;
+            punctuationMark.info = lexeme.substring(matcher.start(),lexeme.length());
             word.type = Type.WORD;
             word.info = lexeme.substring(0,matcher.start());
             partsOfLexemes.add(word);
-            partsOfLexemes.add(punctuation_mark);
+            partsOfLexemes.add(punctuationMark);
         } else {
             word.type = Type.WORD;
             word.info = lexeme;
@@ -65,9 +63,19 @@ public class LexemeParser implements Parser {
 
         for (Element element : partsOfLexemes){
             if(element.type == Type.WORD) {
-                component.add(nextWordParser.parse(element.info));
+                try {
+                    component.add(nextWordParser.parse(element.info));
+                }
+                catch (LeafException ex){
+                    ex.getMessage();
+                }
             }else {
-                component.add(nextPunctuationParser.parse(element.info));
+                try {
+                    component.add(nextPunctuationParser.parse(element.info));
+                }
+                catch (LeafException ex){
+                    ex.getMessage();
+                }
             }
         }
         return component;

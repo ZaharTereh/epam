@@ -2,15 +2,19 @@ package by.training.epam.task2tree.test;
 
 import by.training.epam.task2tree.reader.ReaderFiles;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.File;
 
 public class ReaderTest {
-    @DataProvider(name = "correct")
-    public Object[][] createCorrectDataRead(){
-        String text ="\t\tIt has survived not only five centuries, but also the leap into electronic\n" +
+
+    private String text;
+
+    @BeforeClass
+    public void preparationForRead(){
+        text ="\t\tIt has survived not only five centuries, but also the leap into electronic\n" +
                 "typesetting, remaining essentially unchanged. It was popularised in the with the\n" +
                 "release of Letraset sheets containing Lorem Ipsum passages, and more recently with\n" +
                 "desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n" +
@@ -25,17 +29,17 @@ public class ReaderTest {
                 "\n" +
                 "\t\tBye.\n" +
                 "\n";
+    }
+    @DataProvider(name = "correct")
+    public Object[][] createCorrectDataRead(){
         return
                 new Object[][]{
-                        {true,text},
+                        {text},
                 };
     }
     @Test(description = "test for read from file",dataProvider = "correct",enabled = true)
-    public void readCorrect(boolean expected,String text){
-
+    public void readCorrect(String text){
         String textFromFile = ReaderFiles.readFile(new File("data/input.txt"));
-        boolean result = textFromFile.equals(text);
-
-        Assert.assertEquals(result,expected,"compare is correct");
+        Assert.assertEquals(textFromFile,text,"reading is correct");
     }
 }

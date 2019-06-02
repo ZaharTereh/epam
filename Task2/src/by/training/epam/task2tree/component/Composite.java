@@ -1,6 +1,6 @@
 package by.training.epam.task2tree.component;
 
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.parser.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,6 +30,9 @@ public class Composite implements  Component{
      */
     @Override
     public ArrayList<Component> getList() {
+        /*ArrayList<Component> list = new ArrayList<>();
+        list.addAll(components);
+        return list;*/
         return components;
     }
     /**
@@ -37,18 +40,18 @@ public class Composite implements  Component{
      * @return its text.
      */
     @Override
-    public String getText() {
-        String result = "";
+    public String toString() {
+        StringBuilder result = new StringBuilder();
         for(Component component:components){
             if(component.getType()==Type.LEXEME) {
-                result += component.getText()+" ";
+                result.append(component.toString()+" ");
             }else if(component.getType()==Type.PARAGRAPH){
-                result += "\t\t"+component.getText()+"\n\n";
+                result.append("\t\t"+component.toString()+"\n\n");
             }else {
-                result += component.getText();
+                result.append(component.toString());
             }
         }
-        return result;
+        return result.toString();
     }
     /**
      * Method for adding new objects in ArrayList.
@@ -68,9 +71,36 @@ public class Composite implements  Component{
         return type;
     }
     /**
+     * Override equals method.
+     * @return true if equals, false if not equals.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Composite composite = (Composite) o;
+
+        if (type != composite.type) return false;
+        return components != null ? components.equals(composite.components) : composite.components == null;
+    }
+    /**
+     * Override hashcode method.
+     * @return int number.
+     */
+    @Override
+    public int hashCode() {
+        int result = type != null ? type.hashCode() : 0;
+        result = 31 * result + (components != null ? components.hashCode() : 0);
+        return result;
+    }
+
+    /**
      * Constructor for this class.
      * @param type - type of new object.
      */
+
+
     public Composite(Type type){
         this.type = type;
     }

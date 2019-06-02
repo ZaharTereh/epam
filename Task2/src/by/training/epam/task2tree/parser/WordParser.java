@@ -2,7 +2,7 @@ package by.training.epam.task2tree.parser;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
 
 import java.util.ArrayList;
 /**
@@ -30,7 +30,12 @@ public class WordParser implements Parser {
         }
 
         for (String string : symbols){
-            component.add(nextParser.parse(string));
+            try {
+                component.add(nextParser.parse(string));
+            }
+            catch (LeafException ex){
+                ex.getMessage();
+            }
         }
         return component;
     }

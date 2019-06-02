@@ -2,7 +2,7 @@ package by.training.epam.task2tree.parser;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -19,30 +19,33 @@ public class PunctuationMarkParser implements Parser{
      * Regular expression that help select symbols.
      */
     private Pattern pattern = Pattern.compile("\\p{P}");
-    /**
-     * Matcher for work with regular expression.
-     */
-    private Matcher matcher;
+
     /**
      * Method for parsing punctuation marks.
-     * @param punctuation_mark - punctuation marks which will parsed.
+     * @param punctuationMark - punctuation marks which will parsed.
      * @return component with parsed symbols.
      */
     @Override
-    public Component parse(String punctuation_mark) {
+    public Component parse(String punctuationMark) {
         Component component = new Composite(Type.PUNCTUATION_MARK);
+        Matcher matcher;
         String symbol;
         Character c;
         ArrayList<String> symbols = new ArrayList<>();
-        matcher = pattern.matcher(punctuation_mark);
+        matcher = pattern.matcher(punctuationMark);
         while (matcher.find()){
-            c = punctuation_mark.charAt(matcher.start());
+            c = punctuationMark.charAt(matcher.start());
             symbol = c.toString();
             symbols.add(symbol);
         }
 
         for (String string : symbols){
-            component.add(nextParser.parse(string));
+            try {
+                component.add(nextParser.parse(string));
+            }
+            catch (LeafException ex){
+                ex.getMessage();
+            }
         }
         return component;
     }

@@ -2,7 +2,7 @@ package by.training.epam.task2tree.parser;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -17,16 +17,9 @@ public class SentenceParser implements Parser {
     private Parser nextParser = new LexemeParser();
     /**
      * Regular expression that help select lexemes.
+     * If include \n in paragraph use "(\\w|\\n|\\p{P})+".
      */
     private Pattern pattern = Pattern.compile("[^\\s+|\\n]+");
-    /**
-     * Pattern which include \n in paragraph
-     */
-    //private Pattern pattern = Pattern.compile("(\\w|\\n|\\p{P})+");
-    /**
-     * Matcher for work with regular expression.
-     */
-    private Matcher matcher;
     /**
      * Method for parsing paragraphs.
      * @param sentence - sentences which will parsed.
@@ -35,6 +28,7 @@ public class SentenceParser implements Parser {
     @Override
     public Component parse(String sentence) {
         Component component = new Composite(Type.SENTENCE);
+        Matcher matcher;
         String lexeme ;
         ArrayList<String> lexemes = new ArrayList<>();
         matcher = pattern.matcher(sentence);
@@ -43,7 +37,12 @@ public class SentenceParser implements Parser {
             lexemes.add(lexeme);
         }
         for (String string : lexemes){
+            try {
             component.add(nextParser.parse(string));
+        }
+        catch (LeafException ex){
+            ex.getMessage();
+        }
         }
         return component;
     }

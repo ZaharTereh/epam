@@ -4,25 +4,35 @@ import by.training.epam.task2tree.comparator.SortLexemeByLength;
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
 import by.training.epam.task2tree.component.Leaf;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.parser.Type;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SortLexemeByLengthTest {
 
-    @DataProvider(name = "correct")
-    public Object[][] createCorrectDataCompare(){
+    private Composite composite1;
+    private Composite composite2;
+    private Composite composite3;
 
-        Composite composite1 = new Composite(Type.SENTENCE);
+    private  Composite sentence;
+
+    @BeforeClass
+    public void preparationForCompare(){
+
+        composite1 = new Composite(Type.SENTENCE);
         composite1.add(new Leaf("qwerty"));
 
-        Composite composite2 = new Composite(Type.SENTENCE);
+        composite2 = new Composite(Type.SENTENCE);
         composite2.add(new Leaf("qwert"));
 
-        Composite composite3 = new Composite(Type.SENTENCE);
+        composite3 = new Composite(Type.SENTENCE);
         composite3.add(new Leaf("qwerty"));
 
+    }
+    @DataProvider(name = "correct")
+    public Object[][] createCorrectDataCompare(){
         return
                 new Object[][]{
                         {composite1,composite3,0},
@@ -32,28 +42,29 @@ public class SortLexemeByLengthTest {
     }
     @Test(description = "test for compare",dataProvider = "correct",enabled = true)
     public void compareCorrect(Component o1,Component o2,int expected){
-        int result = new SortLexemeByLength().compare(o1,o2);
-        Assert.assertEquals(result,expected,"compare is correct");
+        Assert.assertEquals(new SortLexemeByLength().compare(o1,o2),expected,"compare is correct");
     }
 
+
+    @BeforeClass
+    public void preparationForSort(){
+        sentence = new Composite(Type.SENTENCE);
+        sentence.add(new Leaf("bbbb"));
+        sentence.add(new Leaf("aaa"));
+
+    }
     @DataProvider(name = "correctSort")
     public Object[][] createCorrectDataSort(){
-
-        Composite composite1 = new Composite(Type.SENTENCE);
-        composite1.add(new Leaf("bbbb"));
-        composite1.add(new Leaf("aaa"));
-
         return
                 new Object[][]{
-                        {composite1,"aaabbbb"}
+                        {sentence,"aaabbbb"}
                 };
     }
     @Test(description = "test for sort",dataProvider = "correctSort",enabled = true)
     public void sortCorrect(Component o1,String expected){
         new SortLexemeByLength().sort(o1);
-        String result = o1.getText();
-        boolean temp = result.equals(expected);
+        String result = o1.toString();
 
-        Assert.assertEquals(temp,true,"sort is correct");
+        Assert.assertEquals(result,expected,"sort is correct");
     }
 }

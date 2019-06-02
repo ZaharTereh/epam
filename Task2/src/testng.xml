@@ -28,11 +28,6 @@
                     <include name="getTypeCorrect" />
                 </methods>
             </class>
-            <class name="by.training.epam.task2tree.test.CreatorTest" >
-                <methods>
-                    <include name="createControllerCorrect" />
-                </methods>
-            </class>
             <class name="by.training.epam.task2tree.test.ParserTest" >
                 <methods>
                     <include name="parseCorrect" />
@@ -41,6 +36,11 @@
             <class name="by.training.epam.task2tree.test.ReaderTest" >
                 <methods>
                     <include name="readCorrect" />
+                </methods>
+            </class>
+            <class name="by.training.epam.task2tree.test.ControllerTest" >
+                <methods>
+                    <include name="getInstanceCorrect" />
                 </methods>
             </class>
         </classes>

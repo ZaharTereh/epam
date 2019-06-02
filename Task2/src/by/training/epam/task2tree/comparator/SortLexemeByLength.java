@@ -1,9 +1,12 @@
 package by.training.epam.task2tree.comparator;
 
 import by.training.epam.task2tree.component.Component;
-import by.training.epam.task2tree.enm.Type;
+import by.training.epam.task2tree.component.LeafException;
+import by.training.epam.task2tree.parser.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 
 /**
@@ -22,8 +25,8 @@ public class SortLexemeByLength implements Sort {
      */
     @Override
     public int compare(Component o1, Component o2) {
-        Integer length1 = o1.getText().length();
-        Integer length2 = o2.getText().length();
+        Integer length1 = o1.toString().length();
+        Integer length2 = o2.toString().length();
         return length1.compareTo(length2);
     }
     /**
@@ -32,13 +35,18 @@ public class SortLexemeByLength implements Sort {
      */
     @Override
     public void sort(Component component) {
-        if (component.getType() == Type.SENTENCE) {
-            component.getList().sort(this);
-        } else {
-            for (Component temp : component.getList()) {
-                sort(temp);
-            }
+        try {
+         if (component.getType() == Type.SENTENCE) {
+             component.getList().sort(this);
+             logger.debug("Sort was successful!");
+         }  else {
+             for (Component temp : component.getList()) {
+                 sort(temp);
+             }
+         }
         }
-        logger.debug("Sort was successful!");
+        catch (LeafException ex){
+        ex.getMessage();
+        }
     }
 }
