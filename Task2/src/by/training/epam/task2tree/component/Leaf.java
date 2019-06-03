@@ -2,6 +2,7 @@ package by.training.epam.task2tree.component;
 import by.training.epam.task2tree.parser.Type;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Leaf in Tree-structure model.
@@ -21,7 +22,7 @@ public class Leaf implements Component {
      * @return null, because Leaf doesn't contain list.
      */
     @Override
-    public ArrayList<Component> getList() throws LeafException {
+    public List<Component> getList() throws LeafException {
         throw new LeafException();
     }
     /**

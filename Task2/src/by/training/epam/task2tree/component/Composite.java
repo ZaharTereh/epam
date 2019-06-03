@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class-entity.Object of this class contain list of objects like THIS,but have another type.
@@ -29,7 +30,7 @@ public class Composite implements  Component{
      * @return instance on list.
      */
     @Override
-    public ArrayList<Component> getList() {
+    public List<Component> getList() {
         /*ArrayList<Component> list = new ArrayList<>();
         list.addAll(components);
         return list;*/
