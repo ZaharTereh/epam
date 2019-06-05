@@ -38,7 +38,7 @@
                     <include name="readCorrect" />
                 </methods>
             </class>
-            <class name="by.training.epam.task2tree.test.ControllerTest" >
+            <class name="by.training.epam.task2tree.test.RepositoryTest" >
                 <methods>
                     <include name="getInstanceCorrect" />
                 </methods>

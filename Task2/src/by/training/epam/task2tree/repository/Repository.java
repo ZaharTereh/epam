@@ -1,4 +1,4 @@
-package by.training.epam.task2tree.controller;
+package by.training.epam.task2tree.repository;
 
 import by.training.epam.task2tree.comparator.Sort;
 import by.training.epam.task2tree.component.Component;
@@ -13,15 +13,15 @@ import java.io.File;
 /**
  * Class for manage Tree-Component.
  */
-public class Controller {
+public class Repository {
     /**
      * Instance in object-controller(for SingleTon)
      */
-    private static Controller controller;
+    private static Repository repository;
     /**
      * Logger for write information about application.
      */
-    private static final Logger logger = LogManager.getLogger(Controller.class.getName());
+    private static final Logger logger = LogManager.getLogger(Repository.class.getName());
     /**
      * Tree-Component.
      */
@@ -59,17 +59,17 @@ public class Controller {
      * @return instance in object-controller or create
      * new object-controller.
      */
-    public static Controller getInstance(){
-        if(controller == null){
-            controller = new Controller();
+    public static Repository getInstance(){
+        if(repository == null){
+            repository = new Repository();
             logger.debug("Controller was successful created");
         }
-        return controller;
+        return repository;
     }
 
     /**
      * Private constructor.
      */
-    private Controller(){
+    private Repository(){
     }
 }
