@@ -11,7 +11,7 @@ public class Auction {
     public final int BIDS_NUMBER = 5;
     public Auction() {
         bids = new ArrayList<>();
-        barrier = new CyclicBarrier(BIDS_NUMBER, () -> {
+        barrier = new CyclicBarrier(BIDS_NUMBER,  () -> {
             Bid winner = Auction.this.defineWinner();
             System.out.println("Bid " + winner.getBidId() + ", price: " + winner.getPrice() + " win!");
         });
