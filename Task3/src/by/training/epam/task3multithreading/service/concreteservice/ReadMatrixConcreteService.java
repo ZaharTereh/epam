@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 public class ReadMatrixConcreteService implements ReadMatrixService {
     @Override
-    public String readMatrix() {
+    public boolean readMatrixISCorrectly() {
 
         String matrixInString = DAOFactory.getInstance().getMatrixDAO().readMatrix();
         parse(matrixInString);
-        return "Reading was successful";
+        return true;
     }
 
     void parse(String matrixInString){
@@ -36,6 +36,7 @@ public class ReadMatrixConcreteService implements ReadMatrixService {
             }
             matrix.add(linesList);
         }
+        Matrix.getInstance().setSize(matrix.size());
         Matrix.getInstance().setMatrix(matrix);
     }
 

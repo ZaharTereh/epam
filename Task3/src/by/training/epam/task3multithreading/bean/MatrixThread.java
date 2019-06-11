@@ -18,17 +18,18 @@ public class MatrixThread extends Thread {
 
     @Override
     public void run() {
+        int size = Matrix.getInstance().getSize();
         try {
-            for(int i = 0; i < 9;i++){
+            for(int i = 0; i < size;i++){
                 locker.lock();
-                change(0 + (int) (Math.random() * 9));
-                //change(i);
+                //change(0 + (int) (Math.random() * size));
+                change(i);
                 locker.unlock();
                 TimeUnit.MILLISECONDS.sleep(10);
 
             /*while (!Matrix.getInstance().isModified()){
                 locker.lock();
-                change(0 + (int) (Math.random() * 9));
+                change(0 + (int) (Math.random() * size));
                 locker.unlock();
                 TimeUnit.MILLISECONDS.sleep(10);*/
 

@@ -3,6 +3,7 @@ package by.training.epam.task3multithreading.bean;
 import java.util.ArrayList;
 
 public class Matrix {
+    private int size;
     private static final Matrix instance = new Matrix();
     private  ArrayList<ArrayList<Element>> matrix;
 
@@ -26,8 +27,16 @@ public class Matrix {
     public static Matrix getInstance(){
         return instance;
     }
-    private Matrix(){}
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    private Matrix(){}
     @Override
     public String toString() {
         if(matrix == null){

@@ -15,7 +15,7 @@ public class ChangeDiagonalConcreteService implements ChangeDiagonalService {
         ArrayList<ArrayList<Element>> commonResource = Matrix.getInstance().getMatrix();
         ReentrantLock locker = new ReentrantLock();
         try{
-            for (int i = 1; i < 6; i++) {
+            for (int i = 1; i < 6; ++i) {
                 Thread t = new MatrixThread(commonResource, locker, i);
                 t.start();
             }
