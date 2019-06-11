@@ -1,5 +1,6 @@
 package by.training.epam.task3multithreading.dao.concretedao;
 
+import by.training.epam.task3multithreading.dao.DAOException;
 import by.training.epam.task3multithreading.dao.MatrixDAO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +19,7 @@ public class FileMatrixDAO implements MatrixDAO {
     private  File file = new File("data/matrix.txt");
 
     @Override
-    public String readMatrix() {
+    public String readMatrix() throws DAOException{
 
         StringBuilder text = new StringBuilder("");
         try {
@@ -33,6 +34,7 @@ public class FileMatrixDAO implements MatrixDAO {
             logger.debug("Reading was successful");
         }catch (IOException ex){
             logger.error(ex.getMessage());
+            throw new DAOException();
         }
         return text.toString();
     }

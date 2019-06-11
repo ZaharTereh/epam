@@ -1,6 +1,5 @@
 package by.training.epam.task3multithreading.controller.command;
 
-import by.training.epam.task3multithreading.bean.Matrix;
 import by.training.epam.task3multithreading.service.ViewMatrixService;
 import by.training.epam.task3multithreading.service.servicefactory.ServiceFactory;
 

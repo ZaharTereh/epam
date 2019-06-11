@@ -1,5 +1,8 @@
 package by.training.epam.task3multithreading.bean;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
@@ -15,9 +18,10 @@ public class MatrixThread extends Thread {
         this.idNumber = idNumber;
         this.setName("Поток " + Integer.toString(idNumber));
     }
+    private static final Logger logger = LogManager.getLogger(MatrixThread.class.getName());
 
     @Override
-    public void run() {
+    public void run() throws NullPointerException{
         int size = Matrix.getInstance().getSize();
         try {
             for(int i = 0; i < size;i++){
@@ -34,12 +38,12 @@ public class MatrixThread extends Thread {
                 TimeUnit.MILLISECONDS.sleep(10);*/
 
             }
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
+        } catch (InterruptedException ex) {
+            logger.error(ex.getMessage());
         }
     }
 
-    void change(int i){
+    void change(int i) throws NullPointerException{
         if(!commonResource.get(i).get(i).isModified()){
             commonResource.get(i).get(i).setInfo(idNumber);
             commonResource.get(i).get(i).setModified(true);
