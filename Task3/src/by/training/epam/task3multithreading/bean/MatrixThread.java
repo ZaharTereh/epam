@@ -21,7 +21,7 @@ public class MatrixThread extends Thread {
     private static final Logger logger = LogManager.getLogger(MatrixThread.class.getName());
 
     @Override
-    public void run() throws NullPointerException{
+    public void run() {
         int size = Matrix.getInstance().getSize();
         try {
             for(int i = 0; i < size;i++){
@@ -43,7 +43,7 @@ public class MatrixThread extends Thread {
         }
     }
 
-    void change(int i) throws NullPointerException{
+    void change(int i) {
         if(!commonResource.get(i).get(i).isModified()){
             commonResource.get(i).get(i).setInfo(idNumber);
             commonResource.get(i).get(i).setModified(true);

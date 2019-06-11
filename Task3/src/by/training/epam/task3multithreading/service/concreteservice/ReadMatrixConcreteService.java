@@ -21,6 +21,7 @@ public class ReadMatrixConcreteService implements ReadMatrixService {
         try {
             String matrixInString = DAOFactory.getInstance().getMatrixDAO().readMatrix();
             parse(matrixInString);
+            logger.debug("Reading was successful");
             return true;
         }catch (DAOException ex){
             logger.error(ex.getMessage());

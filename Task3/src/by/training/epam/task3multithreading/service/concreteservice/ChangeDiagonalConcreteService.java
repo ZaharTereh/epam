@@ -17,6 +17,8 @@ public class ChangeDiagonalConcreteService implements ChangeDiagonalService {
     @Override
     public boolean changeDiagonal() throws ServiceException {
         ArrayList<ArrayList<Element>> commonResource = Matrix.getInstance().getMatrix();
+        if(commonResource == null){throw  new ServiceException();}
+
         ReentrantLock locker = new ReentrantLock();
         try{
             for (int i = 1; i < 6; ++i) {
@@ -24,14 +26,11 @@ public class ChangeDiagonalConcreteService implements ChangeDiagonalService {
                 t.start();
             }
             TimeUnit.SECONDS.sleep(1);
-            return true;
+            logger.debug("Diagonal was changed");
         }catch (InterruptedException ex){
             logger.error(ex.getMessage());
             throw new ServiceException();
         }
-        catch (NullPointerException ex){
-            logger.error(ex.getMessage());
-            throw new ServiceException();
-        }
+        return true;
     }
 }
