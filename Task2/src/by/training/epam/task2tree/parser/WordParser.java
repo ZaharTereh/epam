@@ -3,6 +3,7 @@ package by.training.epam.task2tree.parser;
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.Composite;
 import by.training.epam.task2tree.component.LeafException;
+import by.training.epam.task2tree.component.Type;
 
 import java.util.ArrayList;
 /**

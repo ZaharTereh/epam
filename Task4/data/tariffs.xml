@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs>
+    <!-->VELCOM<-->
+
+    <tariff_with_calls payroll = "19.90" number="+375447457635" registration="">
+        <name>Комфорт M</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minuts>100</free_minuts>
+        <sms price="0.05" max_lenght="70"/>
+        <internet_traffic megabytes="7168" price_for_1MB="0.0336"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>0.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff payroll = "1.85" registration="">
+        <name>WEB Легкий</name>
+        <operator_name>Velcom</operator_name>
+        <internet_traffic megabytes="0" price_for_1MB="0.0065"/>
+        <parametrs>
+            <connect_price>0.00</connect_price>
+        </parametrs>
+    </tariff>
+
+    <tariff_with_calls payroll = "11.90" number="+375443365656" registration="">
+        <name>Комфорт S</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minuts>50</free_minuts>
+        <sms price="0.05" max_lenght="70"/>
+        <internet_traffic megabytes="1024" price_for_1MB="0.0336"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>0.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "25.90" number="+375295453235" registration="">
+        <name>Комфорт L</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minuts>300</free_minuts>
+        <sms price="0.05" max_lenght="70"/>
+        <internet_traffic megabytes="15360" price_for_1MB="0.0336"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>0.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "37.90" number="+375445678905" registration="">
+        <name>Комфорт XL</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minuts>no limit</free_minuts>
+        <sms price="0.05" max_lenght="70"/>
+        <internet_traffic megabytes="30720" price_for_1MB="0.0336"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>0.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "7.90" number="+375295478425" registration="">
+        <name>Стартовый</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.07" lendline="0.07" />
+        <free_minuts>0</free_minuts>
+        <sms price="0.07" max_lenght="70"/>
+        <internet_traffic megabytes="500" price_for_1MB="0.01"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>5.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff payroll = "11.90" registration="">
+        <name>Анлим S</name>
+        <operator_name>Velcom</operator_name>
+        <internet_traffic megabytes="8192" price_for_1MB="0.0"/>
+        <parametrs>
+            <connect_price>11.90</connect_price>
+        </parametrs>
+    </tariff>
+
+    <tariff_with_calls payroll = "57.64" number="+375294439095" registration="">
+        <name>Smart Бесконечный</name>
+        <operator_name>Velcom</operator_name>
+        <call_prices inside="0.00" outside="0.09" lendline="0.09" />
+        <free_minuts>1000</free_minuts>
+        <sms price="0.0" max_lenght="70"/>
+        <internet_traffic megabytes="no limit" price_for_1MB="0.0"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>40.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <!-->MTS<-->
+
+    <tariff_with_calls payroll = "22.00" number="+375334567326" registration="">
+        <name>Супер max</name>
+        <operator_name>MTS</operator_name>
+        <call_prices inside="0.00" outside="0.00" lendline="0.09" />
+        <free_minuts>no limit</free_minuts>
+        <sms price="0.0575" max_lenght="70"/>
+        <internet_traffic megabytes="15360" price_for_1MB="0.0168"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>16.50</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "50.80" number="+375333345454" registration="">
+        <name>ULTRA</name>
+        <operator_name>MTS</operator_name>
+        <call_prices inside="0.0227" outside="0.0921" lendline="0.0921" />
+        <free_minuts>1000</free_minuts>
+        <sms price="0.0455" max_lenght="70"/>
+        <internet_traffic megabytes="10240" price_for_1MB="0.0168"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>50.00</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "6.24" number="+375337896542" registration="">
+        <name>4G лайт</name>
+        <operator_name>MTS</operator_name>
+        <call_prices inside="0.035" outside="0.1154" lendline="0.1154" />
+        <free_minuts>250</free_minuts>
+        <sms price="0.045" max_lenght="70"/>
+        <internet_traffic megabytes="500" price_for_1MB="0.0168"/>
+        <parametrs>
+            <like_numbers></like_numbers>
+            <connect_price>16.50</connect_price>
+            <tariffication>00-01-00</tariffication>
+        </parametrs>
+    </tariff_with_calls>
+
+
+</tariffs>

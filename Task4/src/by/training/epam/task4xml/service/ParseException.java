@@ -1,0 +1,23 @@
+package by.training.epam.task4xml.service;
+
+public class ParseException extends Exception {
+    @Override
+    public String getMessage() {
+        return super.getMessage();
+    }
+
+    @Override
+    public StackTraceElement[] getStackTrace() {
+        return super.getStackTrace();
+    }
+
+    @Override
+    public String getLocalizedMessage() {
+        return super.getLocalizedMessage();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+}

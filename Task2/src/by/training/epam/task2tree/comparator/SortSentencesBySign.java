@@ -2,11 +2,9 @@ package by.training.epam.task2tree.comparator;
 
 import by.training.epam.task2tree.component.Component;
 import by.training.epam.task2tree.component.LeafException;
-import by.training.epam.task2tree.parser.Type;
+import by.training.epam.task2tree.component.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
 
 /**
  * Class which consist methods for sorting sentences by number of concrete sing.

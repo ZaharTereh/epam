@@ -1,6 +1,5 @@
 package by.training.epam.task2tree.component;
 
-import by.training.epam.task2tree.parser.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

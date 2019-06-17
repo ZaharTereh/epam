@@ -2,7 +2,7 @@ package by.training.epam.task2tree.test;
 
 import by.training.epam.task2tree.component.Composite;
 import by.training.epam.task2tree.component.Leaf;
-import by.training.epam.task2tree.parser.Type;
+import by.training.epam.task2tree.component.Type;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
