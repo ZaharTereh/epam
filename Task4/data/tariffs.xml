@@ -1,152 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tariffs>
-    <!-->VELCOM<-->
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/tariffs"
+         xsi:schemaLocation="http://www.example.com/tariffs tariffs.xsd">
 
-    <tariff_with_calls payroll = "19.90" number="+375447457635" registration="">
-        <name>Комфорт M</name>
-        <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
-        <free_minuts>100</free_minuts>
-        <sms price="0.05" max_lenght="70"/>
-        <internet_traffic megabytes="7168" price_for_1MB="0.0336"/>
-        <parametrs>
-            <like_numbers></like_numbers>
-            <connect_price>0.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
-    </tariff_with_calls>
-
-    <tariff payroll = "1.85" registration="">
+<!-->VELCOM<-->
+    <tariff_without_calls payroll = "1.85" registration="2017-02-24">
         <name>WEB Легкий</name>
         <operator_name>Velcom</operator_name>
         <internet_traffic megabytes="0" price_for_1MB="0.0065"/>
-        <parametrs>
+        <options>
             <connect_price>0.00</connect_price>
-        </parametrs>
-    </tariff>
+        </options>
+    </tariff_without_calls>
 
-    <tariff_with_calls payroll = "11.90" number="+375443365656" registration="">
+    <tariff_with_calls payroll = "19.90" number="+375447457635" registration="2016-05-31">
+        <name>Комфорт M</name>
+        <operator_name>Velcom</operator_name>
+        <internet_traffic megabytes="7168" price_for_1MB="0.0336"/>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minutes>100</free_minutes>
+        <sms price="0.05" max_length="70"/>
+        <options_for_call>
+            <connect_price>0.00</connect_price>
+            <like_numbers>
+                <number>+375447457137</number>
+            </like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "11.90" number="+375443365656" registration="2018-01-13">
         <name>Комфорт S</name>
         <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
-        <free_minuts>50</free_minuts>
-        <sms price="0.05" max_lenght="70"/>
         <internet_traffic megabytes="1024" price_for_1MB="0.0336"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minutes>50</free_minutes>
+        <sms price="0.05" max_length="70"/>
+        <options_for_call>
             <connect_price>0.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff_with_calls payroll = "25.90" number="+375295453235" registration="">
+    <tariff_with_calls payroll = "25.90" number="+375295453235" registration="2014-09-19">
         <name>Комфорт L</name>
         <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
-        <free_minuts>300</free_minuts>
-        <sms price="0.05" max_lenght="70"/>
         <internet_traffic megabytes="15360" price_for_1MB="0.0336"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minutes>300</free_minutes>
+        <sms price="0.05" max_length="70"/>
+        <options_for_call>
             <connect_price>0.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff_with_calls payroll = "37.90" number="+375445678905" registration="">
+    <tariff_with_calls payroll = "37.90" number="+375445678905" registration="2017-06-30">
         <name>Комфорт XL</name>
         <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
-        <free_minuts>no limit</free_minuts>
-        <sms price="0.05" max_lenght="70"/>
         <internet_traffic megabytes="30720" price_for_1MB="0.0336"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.00" outside="0.20" lendline="0.20" />
+        <free_minutes>1000</free_minutes>
+        <sms price="0.05" max_length="70"/>
+        <options_for_call>
             <connect_price>0.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff_with_calls payroll = "7.90" number="+375295478425" registration="">
+    <tariff_with_calls payroll = "7.90" number="+375295478425" registration="2018-11-03">
         <name>Стартовый</name>
         <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.07" lendline="0.07" />
-        <free_minuts>0</free_minuts>
-        <sms price="0.07" max_lenght="70"/>
         <internet_traffic megabytes="500" price_for_1MB="0.01"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.00" outside="0.07" lendline="0.07" />
+        <free_minutes>0</free_minutes>
+        <sms price="0.07" max_length="70"/>
+        <options_for_call>
             <connect_price>5.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff payroll = "11.90" registration="">
+    <tariff_without_calls payroll = "11.90" registration="2015-04-09">
         <name>Анлим S</name>
         <operator_name>Velcom</operator_name>
         <internet_traffic megabytes="8192" price_for_1MB="0.0"/>
-        <parametrs>
+        <options>
             <connect_price>11.90</connect_price>
-        </parametrs>
-    </tariff>
-
-    <tariff_with_calls payroll = "57.64" number="+375294439095" registration="">
-        <name>Smart Бесконечный</name>
-        <operator_name>Velcom</operator_name>
-        <call_prices inside="0.00" outside="0.09" lendline="0.09" />
-        <free_minuts>1000</free_minuts>
-        <sms price="0.0" max_lenght="70"/>
-        <internet_traffic megabytes="no limit" price_for_1MB="0.0"/>
-        <parametrs>
-            <like_numbers></like_numbers>
-            <connect_price>40.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
-    </tariff_with_calls>
+        </options>
+    </tariff_without_calls>
 
     <!-->MTS<-->
 
-    <tariff_with_calls payroll = "22.00" number="+375334567326" registration="">
+    <tariff_with_calls payroll = "22.00" number="+375334567326" registration="2016-12-11">
         <name>Супер max</name>
         <operator_name>MTS</operator_name>
-        <call_prices inside="0.00" outside="0.00" lendline="0.09" />
-        <free_minuts>no limit</free_minuts>
-        <sms price="0.0575" max_lenght="70"/>
         <internet_traffic megabytes="15360" price_for_1MB="0.0168"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.00" outside="0.00" lendline="0.09" />
+        <free_minutes>1000</free_minutes>
+        <sms price="0.0575" max_length="70"/>
+        <options_for_call>
             <connect_price>16.50</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff_with_calls payroll = "50.80" number="+375333345454" registration="">
+    <tariff_with_calls payroll = "50.80" number="+375333345454" registration="2017-08-23">
         <name>ULTRA</name>
         <operator_name>MTS</operator_name>
-        <call_prices inside="0.0227" outside="0.0921" lendline="0.0921" />
-        <free_minuts>1000</free_minuts>
-        <sms price="0.0455" max_lenght="70"/>
         <internet_traffic megabytes="10240" price_for_1MB="0.0168"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.0227" outside="0.0921" lendline="0.0921" />
+        <free_minutes>1000</free_minutes>
+        <sms price="0.0455" max_length="70"/>
+        <options_for_call>
             <connect_price>50.00</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
-    <tariff_with_calls payroll = "6.24" number="+375337896542" registration="">
+    <tariff_with_calls payroll = "6.24" number="+375337896542" registration="2018-07-28">
         <name>4G лайт</name>
         <operator_name>MTS</operator_name>
-        <call_prices inside="0.035" outside="0.1154" lendline="0.1154" />
-        <free_minuts>250</free_minuts>
-        <sms price="0.045" max_lenght="70"/>
         <internet_traffic megabytes="500" price_for_1MB="0.0168"/>
-        <parametrs>
-            <like_numbers></like_numbers>
+        <call_prices inside="0.035" outside="0.1154" lendline="0.1154" />
+        <free_minutes>250</free_minutes>
+        <sms price="0.045" max_length="70"/>
+        <options_for_call>
             <connect_price>16.50</connect_price>
-            <tariffication>00-01-00</tariffication>
-        </parametrs>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
     </tariff_with_calls>
 
+    <tariff_without_calls payroll = "10.90" registration="2018-10-21">
+        <name>Интернет Midi</name>
+        <operator_name>MTS</operator_name>
+        <internet_traffic megabytes="20480" price_for_1MB="0.0168"/>
+        <options>
+            <connect_price>10.90</connect_price>
+        </options>
+    </tariff_without_calls>
+
+    <tariff_with_calls payroll = "22.00" number="+375334567326" registration="2018-04-18">
+        <name>Супер max</name>
+        <operator_name>MTS</operator_name>
+        <internet_traffic megabytes="15360" price_for_1MB="0.0168"/>
+        <call_prices inside="0.00" outside="0.00" lendline="0.09" />
+        <free_minutes>1000</free_minutes>
+        <sms price="0.0575" max_length="70"/>
+        <options_for_call>
+            <connect_price>16.50</connect_price>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "0.62" number="+375293334564" registration="2017-05-29">
+        <name>Легко сказать</name>
+        <operator_name>MTS</operator_name>
+        <internet_traffic megabytes="50" price_for_1MB="0.0168"/>
+        <call_prices inside="0.0804" outside="0.1615" lendline="0.1615" />
+        <free_minutes>1000</free_minutes>
+        <sms price="0.0225" max_length="70"/>
+        <options_for_call>
+            <connect_price>0.0</connect_price>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
+
+    <!-->life:)<-->
+
+    <tariff_with_calls payroll = "9.50" number="+375331139095" registration="2016-12-13">
+        <name>Шейк 1</name>
+        <operator_name>life</operator_name>
+        <internet_traffic megabytes="3072" price_for_1MB="0.05"/>
+        <call_prices inside="0.0" outside="0.075" lendline="0.075" />
+        <free_minutes>300</free_minutes>
+        <sms price="0.04" max_length="70"/>
+        <options_for_call>
+            <connect_price>0.0</connect_price>
+            <like_numbers>
+                <number>+375331121234</number>
+            </like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "11.40" number="+375331139073" registration="2016-03-17">
+        <name>Йо 1200</name>
+        <operator_name>life</operator_name>
+        <internet_traffic megabytes="4096" price_for_1MB="0.05"/>
+        <call_prices inside="0.0" outside="0.075" lendline="0.075" />
+        <free_minutes>500</free_minutes>
+        <sms price="0.04" max_length="70"/>
+        <options_for_call>
+            <connect_price>0.0</connect_price>
+            <like_numbers></like_numbers>
+            <tariffication>00:01:00.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
+
+    <tariff_with_calls payroll = "20.93" number="+375335678498" registration="2018-06-14">
+        <name>Старт</name>
+        <operator_name>life</operator_name>
+        <internet_traffic megabytes="51200" price_for_1MB="0.05"/>
+        <call_prices inside="0.0" outside="0.075" lendline="0.075" />
+        <free_minutes>200</free_minutes>
+        <sms price="0.04" max_length="70"/>
+        <options_for_call>
+            <connect_price>0.0</connect_price>
+            <like_numbers>
+                <number>+375331121245</number>
+            </like_numbers>
+            <tariffication>00:00:12.000</tariffication>
+        </options_for_call>
+    </tariff_with_calls>
 
 </tariffs>

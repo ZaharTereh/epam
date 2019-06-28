@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/tariffs"
+        xmlns:tns="http://www.example.com/tariffs"
+        elementFormDefault="qualified">
+
+    <simpleType name="price">
+        <restriction base="double">
+            <minInclusive value="0"/>
+            <maxInclusive value="unbounded"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="number">
+            <restriction base="string">
+                <pattern value="\+375-?(29|44|33)-?\d{3}-?\d{2}-?\d{2}"/>
+            </restriction>
+    </simpleType>
+    <complexType name="options">
+        <sequence>
+            <element name="connect_price" type="tns:price"/>
+        </sequence>
+    </complexType>
+    <complexType name="options_for_call">
+        <sequence>
+            <element name="connect_price" type="tns:price"/>
+            <element name="like_numbers">
+                <complexType>
+                    <sequence>
+                        <element name="number" type="tns:number" minOccurs="0" maxOccurs="5"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="tariffication">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="00:01:00.000"/>
+                                <enumeration value="00:00:12.000"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Tariff">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="operator_name">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Velcom"/>
+                        <enumeration value="MTS"/>
+                        <enumeration value="life"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="internet_traffic">
+                <complexType>
+                    <attribute name="megabytes" type="unsignedInt"/>
+                    <attribute name="price_for_1MB" type="tns:price"/>
+                </complexType>
+            </element>
+            <element name="options" type="tns:options" minOccurs="0"/>
+        </sequence>
+        <attribute name="payroll" type="tns:price"/>
+        <attribute name="number" type="tns:number"/>
+        <attribute name="registration">
+            <simpleType>
+                <restriction base="date">
+                    <minInclusive value="2005-01-01"/>
+                    <maxInclusive value="2019-07-01"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <complexType name="Tariff_with_calls">
+        <complexContent>
+            <extension base="tns:Tariff">
+                <sequence>
+                    <element name="call_prices">
+                        <complexType>
+                            <attribute name="inside" type="tns:price"/>
+                            <attribute name="outside" type="tns:price"/>
+                            <attribute name="lendline" type="tns:price"/>
+                        </complexType>
+                    </element>
+                    <element name="free_minutes" type="unsignedShort"/>
+                    <element name="sms">
+                        <complexType>
+                            <attribute name="price" type="tns:price"/>
+                            <attribute name="max_length" type="unsignedByte"/>
+                        </complexType>
+                    </element>
+                    <element name="options_for_call" type="tns:options_for_call"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Tariff_without_calls">
+        <complexContent>
+            <extension base="tns:Tariff"/>
+        </complexContent>
+    </complexType>
+
+
+    <element name="tariff" type="tns:Tariff" abstract="true"/>
+    <element name="tariff_with_calls" type="tns:Tariff_with_calls" substitutionGroup="tns:tariff"/>
+    <element name="tariff_without_calls" type="tns:Tariff_without_calls" substitutionGroup="tns:tariff"/>
+
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element  ref="tns:tariff" minOccurs="16" maxOccurs="unbounded"/>
+                <!--><element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/>
+                <element  ref="tns:tariff_with_calls"/><-->
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://java.sun.com/xml/ns/javaee"
+	     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	     					 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	     id="WebApp_ID" version="3.0">
+
+  <display-name>HelloWorld</display-name>
+
+  <servlet>
+  	<servlet-name>Servlet</servlet-name>
+  	<servlet-class>by.training.epam.task4xml.controller.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>Servlet</servlet-name>
+  		<url-pattern>/parse</url-pattern>
+  </servlet-mapping>
+
+	<servlet>
+		<servlet-name>MainJSP</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainJSP</servlet-name>
+		<url-pattern>/task4</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>JSP</servlet-name>
+		<jsp-file>/result.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JSP</servlet-name>
+		<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -6,26 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandProvider {
-    private final Map<CommandName, Command> repository = new HashMap<>();
+    private final Map<CommandName, Command> commands = new HashMap<>();
 
-    CommandProvider() {
-        repository.put(CommandName.READ, new ());
-        repository.put(CommandName.VIEW, new ());
-        repository.put(CommandName.CHANGE, new ());
-        repository.put(CommandName.WRONG_REQUEST, new WrongRequest());
-        repository.put(CommandName.EXIT, new Exit());
+    public CommandProvider() {
+        commands.put(CommandName.SAX, new SAXCommand());
+        commands.put(CommandName.STAX, new StAXCommand());
+        commands.put(CommandName.DOM, new DOMCommand());
     }
 
-    Command getCommand(String name) {
-        CommandName commandName;
-        Command command;
-        try {
-            commandName = CommandName.valueOf(name.toUpperCase());
-            command = repository.get(commandName);
-        } catch (IllegalArgumentException | NullPointerException e) {
-
-            command = repository.get(CommandName.WRONG_REQUEST);
-        }
+    public Command getCommand(String name) {
+        CommandName commandName = CommandName.valueOf(name);
+        Command command = commands.get(commandName);
         return command;
     }
 }

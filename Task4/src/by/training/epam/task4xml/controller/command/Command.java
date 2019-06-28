@@ -1,5 +1,7 @@
 package by.training.epam.task4xml.controller.command;
 
+import java.util.List;
+
 public interface Command {
-    String execute(String request);
+    List<List<String>> execute(String request);
 }
