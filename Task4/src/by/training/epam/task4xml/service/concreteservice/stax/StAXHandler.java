@@ -44,6 +44,24 @@ public class StAXHandler {
                             String registrat = reader.getAttributeValue(null,"registration");
                             tariffWithoutCalls.setDate(registrat);
                             break;
+                        case CALL_PRICES:
+                            tariffWithCalls.setPriceInside(Double.parseDouble(reader.getAttributeValue(null,"inside")));
+                            tariffWithCalls.setPriceOutside(Double.parseDouble(reader.getAttributeValue(null,"outside")));
+                            tariffWithCalls.setPriceLendline(Double.parseDouble(reader.getAttributeValue(null,"lendline")));
+                            break;
+                        case INTERNET_TRAFFIC:
+                            if (tariffWithCalls != null) {
+                                tariffWithCalls.setMegabytes(Integer.parseInt(reader.getAttributeValue(null,"megabytes")));
+                                tariffWithCalls.setPriceForOneMB(Double.parseDouble(reader.getAttributeValue(null,"price_for_1MB")));
+                            } else {
+                                tariffWithoutCalls.setMegabytes(Integer.parseInt(reader.getAttributeValue(null,"megabytes")));
+                                tariffWithoutCalls.setPriceForOneMB(Double.parseDouble(reader.getAttributeValue(null,"price_for_1MB")));
+                            }
+                           break;
+                        case SMS:
+                            tariffWithCalls.setPriceForSms(Double.parseDouble(reader.getAttributeValue(null,"price")));
+                            tariffWithCalls.setMaxLengthSms(Short.parseShort(reader.getAttributeValue(null,"max_length")));
+                            break;
                     }
                     break;
 
@@ -84,11 +102,7 @@ public class StAXHandler {
             case OPERATOR_NAME:
                 tariffWithCalls.setOperator(Operator.valueOf(text.toUpperCase()));
                 break;
-            case CALL_PRICES:
-                tariffWithCalls.setPriceInside(Double.parseDouble(reader.getAttributeValue(null,"inside")));
-                tariffWithCalls.setPriceOutside(Double.parseDouble(reader.getAttributeValue(null,"outside")));
-                tariffWithCalls.setPriceLendline(Double.parseDouble(reader.getAttributeValue(null,"lendline")));
-                break;
+
             case FREE_MINUTES:
                 tariffWithCalls.setFreeMinutes(Integer.parseInt(text));
                 break;
@@ -100,14 +114,6 @@ public class StAXHandler {
                 break;
             case TARIFFICATION:
                 tariffWithCalls.setTariffication(text);
-                break;
-            case INTERNET_TRAFFIC:
-                tariffWithCalls.setMegabytes(Integer.parseInt(reader.getAttributeValue(null,"megabytes")));
-                tariffWithCalls.setPriceForOneMB(Double.parseDouble(reader.getAttributeValue(null,"price_for_1MB")));
-                break;
-            case SMS:
-                tariffWithCalls.setPriceForSms(Double.parseDouble(reader.getAttributeValue(null,"price")));
-                tariffWithCalls.setMaxLengthSms(Short.parseShort(reader.getAttributeValue(null,"max_length")));
                 break;
             default:
                 break;
@@ -123,10 +129,6 @@ public class StAXHandler {
                 break;
             case CONNECT_PRICE:
                 tariffWithoutCalls.setPriceForConnect(Double.parseDouble(text));
-                break;
-            case INTERNET_TRAFFIC:
-                tariffWithoutCalls.setMegabytes(Integer.parseInt(reader.getAttributeValue(null,"megabytes")));
-                tariffWithoutCalls.setPriceForOneMB(Double.parseDouble(reader.getAttributeValue(null,"price_for_1MB")));
                 break;
             default:
                 break;

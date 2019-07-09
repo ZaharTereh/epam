@@ -9,7 +9,6 @@ import by.training.epam.task4xml.bean.TariffWithCalls;
 import by.training.epam.task4xml.bean.TariffWithoutCalls;
 import by.training.epam.task4xml.service.Parser;
 import by.training.epam.task4xml.service.concreteservice.parsertostring.ParserInString;
-import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -17,11 +16,11 @@ import org.xml.sax.SAXException;
 
 
 public class ParserDOM implements Parser{
-    private List<TariffWithoutCalls> tariffs = new ArrayList<>();
 
     @Override
     public List<List<String>> parse(String fileName) {
-        DOMParser parser = new DOMParser();
+        org.apache.xerces.parsers.DOMParser parser = new  org.apache.xerces.parsers.DOMParser();
+        List<TariffWithoutCalls> tariffs = new ArrayList<>();
         try {
             parser.parse(fileName);
             Document document = parser.getDocument();
@@ -29,11 +28,9 @@ public class ParserDOM implements Parser{
             NodeList tariffWithoutCallsNodes = root.getElementsByTagName("tariff_without_calls");
             NodeList tariffWithCallsNodes = root.getElementsByTagName("tariff_with_calls");
 
-            TariffWithoutCalls tariffWithoutCalls = null;
-            TariffWithCalls tariffWithCalls = null;
 
-            parseTariffWithoutCalls(tariffWithoutCalls,tariffWithoutCallsNodes);
-            parseTariffWithCalls(tariffWithCalls,tariffWithCallsNodes);
+            parseTariffWithoutCalls(tariffWithoutCallsNodes,tariffs);
+            parseTariffWithCalls(tariffWithCallsNodes,tariffs);
 
         }catch (IOException ex){
             ex.getMessage();
@@ -50,9 +47,9 @@ public class ParserDOM implements Parser{
         return child;
     }
 
-    private void parseTariffWithoutCalls(TariffWithoutCalls tariffWithoutCalls,NodeList tariffWithoutCallsNodes){
+    private void parseTariffWithoutCalls(NodeList tariffWithoutCallsNodes,List<TariffWithoutCalls> tariffs){
         for (int i = 0; i < tariffWithoutCallsNodes.getLength(); i++) {
-            tariffWithoutCalls = new TariffWithoutCalls();
+            TariffWithoutCalls tariffWithoutCalls = new TariffWithoutCalls();
             Element element = (Element) tariffWithoutCallsNodes.item(i);
 
             tariffWithoutCalls.setPayroll(Double.parseDouble(element.getAttribute("payroll")));
@@ -66,9 +63,9 @@ public class ParserDOM implements Parser{
             tariffs.add(tariffWithoutCalls);
         }
     }
-    private void parseTariffWithCalls(TariffWithCalls tariffWithCalls,NodeList tariffWithCallsNodes){
+    private void parseTariffWithCalls(NodeList tariffWithCallsNodes,List<TariffWithoutCalls> tariffs){
         for (int i = 0; i < tariffWithCallsNodes.getLength(); i++) {
-            tariffWithCalls = new TariffWithCalls();
+            TariffWithCalls tariffWithCalls = new TariffWithCalls();
             Element element = (Element) tariffWithCallsNodes.item(i);
 
             tariffWithCalls.setPayroll(Double.parseDouble(element.getAttribute("payroll")));

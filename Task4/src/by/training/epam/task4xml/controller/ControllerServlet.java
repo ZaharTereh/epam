@@ -17,9 +17,10 @@ public class ControllerServlet extends HttpServlet {
             throws IOException, ServletException{
 
         Command command = provider.getCommand(request.getParameter("select"));
-        request.getPart(request.getParameter("XMLFile"));
+        //request.getPart(request.getParameter("XMLFile"));
         List<List<String>> list = command.execute(fileName);
 
+        request.setAttribute("parser",request.getParameter("select"));
         request.setAttribute("list",list);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/result.jsp");
