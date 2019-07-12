@@ -1,0 +1,10 @@
+2019-06-12 00:20:37.997 [main] DEBUG by.training.epam.task3multithreading.service.concreteservice.ViewMatrixOnConsoleService - Matrix output
+2019-06-12 00:20:40.442 [main] ERROR by.training.epam.task3multithreading.controller.command.ChangeDiagonal - null
+2019-06-12 00:20:42.158 [main] DEBUG by.training.epam.task3multithreading.service.concreteservice.ViewMatrixOnConsoleService - Matrix output
+2019-06-12 00:20:45.750 [main] DEBUG by.training.epam.task3multithreading.dao.concretedao.FileMatrixDAO - Reading from matrix.txt file...
+2019-06-12 00:20:45.752 [main] DEBUG by.training.epam.task3multithreading.dao.concretedao.FileMatrixDAO - Reading was successful
+2019-06-12 00:20:45.758 [main] DEBUG by.training.epam.task3multithreading.service.concreteservice.ReadMatrixConcreteService - Reading was successful
+2019-06-12 00:20:50.418 [main] DEBUG by.training.epam.task3multithreading.service.concreteservice.ChangeDiagonalConcreteService - Diagonal was changed
+2019-06-12 00:20:50.419 [main] DEBUG by.training.epam.task3multithreading.controller.command.WrongRequest - Was writing unknown command
+2019-06-12 00:20:52.795 [main] DEBUG by.training.epam.task3multithreading.service.concreteservice.ViewMatrixOnConsoleService - Matrix output
+2019-06-12 00:21:03.705 [main] DEBUG by.training.epam.task3multithreading.controller.command.Exit - Exit from application
